@@ -1,8 +1,10 @@
 import 'package:flutter/services.dart';
 import 'dart:ui' as ui;
 import 'package:nft_app/app.dart';
+import 'package:nft_app/models/nft.dart';
 import 'package:nft_app/screens/home/components/trending_card.dart';
 import 'package:nft_app/src/constants/assets.dart';
+import 'package:nft_app/src/constants/nft.dart';
 import 'package:nft_app/src/widgets/custom_shapes/trending.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -42,6 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: ListView(
+        shrinkWrap: true,
         children: [
           Padding(
             padding: EdgeInsets.fromLTRB(29.w, 20.h, 0, 20.h),
@@ -51,10 +54,17 @@ class _HomeScreenState extends State<HomeScreen> {
               fontWeight: FontWeight.w700,
             ),
           ),
-          TrendingCard()
+          SizedBox(height: 380.h,
+            child: ListView.builder(scrollDirection: Axis.horizontal,
+                shrinkWrap: true,physics: const BouncingScrollPhysics(),
+                itemBuilder: (context, index) => Padding(
+                      padding: EdgeInsets.only(left: index == 0 ? 20.w : 12.w),
+                      child: TrendingCard(nft: trending[index]),
+                    ),
+                itemCount: trending.length),
+          ),
         ],
       ),
     ));
   }
-
 }

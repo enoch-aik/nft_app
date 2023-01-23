@@ -1,6 +1,5 @@
 //ALL IMAGES
 const String nft1 = 'assets/images/image1.png';
-const String croppedNft1 = 'assets/images/img1.png';
 const String nft2 = 'assets/images/image2.png';
 const String nft3 = 'assets/images/image3.png';
 const String nft4 = 'assets/images/image4.png';
@@ -11,3 +10,4 @@ const String user2 = 'assets/images/user2.png';
 //SVG FILES
 const String logo = 'assets/svg/logo.svg';
 const String notificationIcon = 'assets/svg/notification.svg';
+const String likeIcon = 'assets/svg/like.svg';
