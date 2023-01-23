@@ -1,36 +1,37 @@
+import 'dart:ui' as ui show Image;
 
+import 'package:flutter/rendering.dart';
 
-import 'package:flutter/material.dart';
-
-
-class TrendingCustomPainter extends CustomPainter {
+class TrendingCustomPainter extends CustomClipper<Path> {
   @override
-  void paint(Canvas canvas, Size size) {
-
+  Path getClip(Size size) {
     Path path_0 = Path();
-    path_0.moveTo(30,0);
-    path_0.cubicTo(13.4315,0,0,13.4314,0,30);
-    path_0.lineTo(0,236.716);
-    path_0.cubicTo(0,253.284,13.4314,266.716,30,266.716);
-    path_0.lineTo(47.3047,266.716);
-    path_0.cubicTo(59.455,266.716,69.3047,256.866,69.3047,244.716);
-    path_0.lineTo(69.3047,215.595);
-    path_0.cubicTo(69.3047,205.654,77.3636,197.595,87.3047,197.595);
-    path_0.lineTo(181.345,197.595);
-    path_0.cubicTo(193.495,197.595,203.345,187.745,203.345,175.595);
-    path_0.lineTo(203.345,30);
-    path_0.cubicTo(203.345,13.4315,189.913,0,173.345,0);
-    path_0.lineTo(30,0);
+    path_0.moveTo(size.width*0.1470588,0);
+    path_0.cubicTo(size.width*0.06584069,0,0,size.height*0.05030487,0,size.height*0.1123596);
+    path_0.lineTo(0,size.height*0.8865768);
+    path_0.cubicTo(0,size.height*0.9486292,size.width*0.06584020,size.height*0.9989363,size.width*0.1470588,size.height*0.9989363);
+    path_0.lineTo(size.width*0.2318858,size.height*0.9989363);
+    path_0.cubicTo(size.width*0.2914461,size.height*0.9989363,size.width*0.3397289,size.height*0.9620449,size.width*0.3397289,size.height*0.9165393);
+    path_0.lineTo(size.width*0.3397289,size.height*0.8074719);
+    path_0.cubicTo(size.width*0.3397289,size.height*0.7702397,size.width*0.3792333,size.height*0.7400562,size.width*0.4279642,size.height*0.7400562);
+    path_0.lineTo(size.width*0.8889461,size.height*0.7400562);
+    path_0.cubicTo(size.width*0.9485049,size.height*0.7400562,size.width*0.9967892,size.height*0.7031648,size.width*0.9967892,size.height*0.6576592);
+    path_0.lineTo(size.width*0.9967892,size.height*0.1123596);
+    path_0.cubicTo(size.width*0.9967892,size.height*0.05030524,size.width*0.9309461,0,size.width*0.8497304,0);
+    path_0.lineTo(size.width*0.1470588,0);
     path_0.close();
 
-    Paint paint0Fill = Paint()..style=PaintingStyle.fill;
-    paint0Fill.color = const Color(0xffC4C4C4).withOpacity(1.0);
-    canvas.drawPath(path_0,paint0Fill);
 
+    return path_0;
+
+    Paint paint0Fill = Paint()..style = PaintingStyle.stroke;
+    paint0Fill.color = const Color(0xffC4C4C4).withOpacity(1.0);
+    //canvas.drawPath(path_0,paint0Fill);
+    //canvas.drawImage(background, Offset.zero, paint0Fill);
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
+  bool shouldReclip(covariant CustomClipper oldClipper) {
+    return false;
   }
 }
