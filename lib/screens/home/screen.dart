@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 200.h)
+              SizedBox(height: 100.h)
             ],
           ),
           Align(

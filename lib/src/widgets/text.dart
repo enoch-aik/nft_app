@@ -37,7 +37,7 @@ class KText extends StatelessWidget {
           fontSize: fontSize ?? 14.sp,
           fontStyle: fontStyle,
           fontFamily: fontFamily,
-          fontWeight: fontWeight ?? FontWeight.w300,
+          fontWeight: fontWeight ?? FontWeight.w400,
           color: color ?? CustomColors.textColor,
           height: lineHeight),
     );
