@@ -13,6 +13,7 @@ const String recent6 = 'assets/images/image11.png';
 const String user1 = 'assets/images/user1.png';
 const String user2 = 'assets/images/user2.png';
 const String user3 = 'assets/images/user3.png';
+const String confetti = 'assets/images/bid_success.png';
 
 //SVG FILES
 const String logo = 'assets/svg/logo.svg';
