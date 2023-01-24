@@ -2,7 +2,7 @@ import 'dart:ui' as ui show Image;
 
 import 'package:flutter/rendering.dart';
 
-class TrendingCustomPainter extends CustomClipper<Path> {
+class TrendingCustomShape extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path_0 = Path();

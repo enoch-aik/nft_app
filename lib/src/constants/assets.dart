@@ -6,6 +6,7 @@ const String nft4 = 'assets/images/image4.png';
 const String nft5 = 'assets/images/image5.png';
 const String user1 = 'assets/images/user1.png';
 const String user2 = 'assets/images/user2.png';
+const String user3 = 'assets/images/user3.png';
 
 //SVG FILES
 const String logo = 'assets/svg/logo.svg';
