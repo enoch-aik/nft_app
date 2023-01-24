@@ -13,10 +13,15 @@ const String recent6 = 'assets/images/image11.png';
 const String user1 = 'assets/images/user1.png';
 const String user2 = 'assets/images/user2.png';
 const String user3 = 'assets/images/user3.png';
+const String user4 = 'assets/images/user4.png';
+const String confetti = 'assets/images/bid_success.png';
+const String profileBg = 'assets/images/profile_bg.png';
 
 //SVG FILES
 const String logo = 'assets/svg/logo.svg';
+const String whiteLogo = 'assets/svg/logo_white.svg';
 const String notificationIcon = 'assets/svg/notification.svg';
+const String whiteNotificationIcon = 'assets/svg/notification_white.svg';
 const String likeIcon = 'assets/svg/like.svg';
 const String cartIcon = 'assets/svg/cart.svg';
 const String discoverIcon = 'assets/svg/discover.svg';
