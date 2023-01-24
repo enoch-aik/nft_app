@@ -4,6 +4,7 @@ import 'dart:ui' as ui;
 import 'package:nft_app/app.dart';
 import 'package:nft_app/models/nft.dart';
 import 'package:nft_app/screens/home/components/bottom_nav_icon.dart';
+import 'package:nft_app/screens/home/components/recent_card.dart';
 import 'package:nft_app/screens/home/components/top_seller.dart';
 import 'package:nft_app/screens/home/components/trending_card.dart';
 import 'package:nft_app/src/constants/assets.dart';
@@ -70,17 +71,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemCount: trending.length),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(29.w, 20.h, 0, 20.h),
+                padding: EdgeInsets.fromLTRB(29.w, 20.h, 0, 16.h),
                 child: KText(
                   'Top Seller',
                   fontSize: 20.sp,
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(height: 83.h,
+              SizedBox(
+                height: 83.h,
                 child: ListView.builder(
                   itemBuilder: (context, index) => Padding(
-                    padding:  EdgeInsets.only(left: index == 0? 22.w:9.w),
+                    padding: EdgeInsets.only(left: index == 0 ? 22.w : 9.w),
                     child: topSeller(),
                   ),
                   itemCount: 5,
@@ -88,6 +90,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.horizontal,
                 ),
               ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(29.w, 20.h, 0, 10.h),
+                child: KText(
+                  'Recent',
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
+                child: GridView.count(physics:const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  children: [
+                    ...List.generate(
+                        6,
+                        (index) =>
+                            recentCard(imageUrl: recentImages[index]))
+                  ],
+                ),
+              ),
+              SizedBox(height: 200.h)
             ],
           ),
           Align(

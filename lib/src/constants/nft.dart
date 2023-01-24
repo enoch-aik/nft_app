@@ -34,3 +34,7 @@ const List<NFT> trending = [
       imageUrl: nft5,
       creator: 'IamJackRider'),
 ];
+
+List<String> recentImages = [
+  recent1,recent2,recent3,recent4,recent5,recent6
+];
